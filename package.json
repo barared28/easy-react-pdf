@@ -4,6 +4,10 @@
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "homepage": "https://github.com/barared28/easy-react-pdf",
+  "repository": {
+    "url": "https://github.com/barared28/easy-react-pdf"
+  },
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
   },

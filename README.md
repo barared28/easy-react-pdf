@@ -61,3 +61,38 @@ function Main(template: IPDFPage) {
   );
 }
 ```
+
+## Example Template
+
+```typescript
+const contents: IPDFPage = {
+  contents: [
+    {
+      type: "views",
+      style: {
+        width: "100%",
+        height: "100%",
+        alignItems: "center",
+        justifyContent: "center",
+        display: "flex",
+      },
+      contents: [
+        {
+          type: "text",
+          text: "Hello World",
+          style: {
+            fontSize: 20,
+            fontWeight: "bold",
+          },
+        },
+      ],
+    },
+  ],
+  document: {
+    title: "Payment Schedules",
+  },
+  pages: {
+    size: "A4",
+  },
+};
+```

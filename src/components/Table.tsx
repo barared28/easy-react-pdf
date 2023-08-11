@@ -99,7 +99,14 @@ export const Table = (props: ITable) => {
       <THead style={styleHeader}>
         <TR style={styleRowHeader}>
           {columns.map((column) => (
-            <TH flex={column?.flex || 1} style={styleCellHeader}>
+            <TH
+              flex={column?.flex || 1}
+              style={
+                column?.style
+                  ? { ...styleCellHeader, ...column?.style }
+                  : styleCellHeader
+              }
+            >
               {column?.label}
             </TH>
           ))}
@@ -109,7 +116,14 @@ export const Table = (props: ITable) => {
         {data.map((row) => (
           <TR style={styleRowBody}>
             {columns.map((column) => (
-              <TD flex={column?.flex || 1} style={styleCellBody}>
+              <TD
+                flex={column?.flex || 1}
+                style={
+                  column?.style
+                    ? { ...styleCellBody, ...column?.style }
+                    : styleCellBody
+                }
+              >
                 {row[column?.key]}
               </TD>
             ))}

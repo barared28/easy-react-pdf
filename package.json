@@ -29,6 +29,5 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
-  "type": "module"
+  "types": "dist/index.d.ts"
 }

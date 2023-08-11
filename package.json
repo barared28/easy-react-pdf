@@ -29,5 +29,15 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "pdf",
+    "react-pdf",
+    "react-pdf-renderer",
+    "json-to-pdf",
+    "pdf-generator",
+    "pdf-creator",
+    "pdf-template"
+  ]
 }

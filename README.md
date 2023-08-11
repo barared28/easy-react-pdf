@@ -24,4 +24,40 @@ npm install react react-dom @react-pdf/renderer
 
 ## Usage
 
-on development
+### Node js
+
+#### Stream File
+
+```typescript
+import { createStreamPDF, IPDFPage } from "easy-react-pdf";
+
+async function main(template: IPDFPage) {
+  const stream = await createStreamPDF(template);
+  return stream.pipe(fs.createWriteStream("output.pdf"));
+}
+```
+
+#### Create File
+
+```typescript
+import { createFilePDF, IPDFPage } from "easy-react-pdf";
+
+async function main(template: IPDFPage) {
+  await createFilePDF(template, "path/to/file.pdf");
+}
+```
+
+### React
+
+```typescript
+import { PDFViewer } from "@react-pdf/renderer";
+import { Document } from "easy-react-pdf";
+
+function Main(template: IPDFPage) {
+  return (
+    <PDFViewer>
+      <Document {...template} />
+    </PDFViewer>
+  );
+}
+```

@@ -4,7 +4,7 @@
 
 ## Overview
 
-The Easy React PDF is a library that simplifies the process of generating PDF files from JSON configurations. With this library, you can easily create complex PDF documents with various styles, layouts, and content. and make it easy for template designers to create PDF templates without having to write code.
+The Easy React PDF is a library that simplifies the process of generating PDF files from JSON configurations. With this library, you can easily create complex PDF documents with various styles, layouts, and content. and make it easy for templating PDF files.
 
 ## Installation
 
@@ -21,3 +21,7 @@ you need install react, react-pdf and react-dom in your project
 ```bash
 npm install react react-dom @react-pdf/renderer
 ```
+
+## Usage
+
+on development

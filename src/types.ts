@@ -12,7 +12,7 @@ export interface IDocument {
 export interface IPages {
   wrap?: boolean;
   orientation?: "portrait" | "landscape";
-  size?: "A3" | "A4" | "A5" | "LETTER" | "LEGAL" | "EXECUTIVE" | "TABLOID";
+  size: "A3" | "A4" | "A5" | "LETTER" | "LEGAL" | "EXECUTIVE" | "TABLOID";
   style?: Style;
 }
 

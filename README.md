@@ -96,3 +96,17 @@ const contents: IPDFPage = {
   },
 };
 ```
+
+## API
+
+### Validations
+
+```typescript
+import { validateJsonPDF, validateObjectPDF } from "easy-react-pdf";
+
+const validateJson = validateJsonPDF(contents);
+
+const validateObject = validateObjectPDF(contents);
+```
+
+this function return a valid object or throw a error

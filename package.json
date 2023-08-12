@@ -1,6 +1,6 @@
 {
   "name": "easy-react-pdf",
-  "version": "0.0.11",
+  "version": "0.0.14",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -39,5 +39,8 @@
     "pdf-generator",
     "pdf-creator",
     "pdf-template"
-  ]
+  ],
+  "dependencies": {
+    "zod": "^3.21.4"
+  }
 }

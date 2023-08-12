@@ -263,18 +263,18 @@ const IViewsSchema: any = z.lazy(() =>
   })
 );
 
-const ContentSchema = z.lazy(() =>
-  z.union([ITextSchema, ITableSchema, IViewsSchema, IImageSchema])
-);
-
 const IHeaderSchema = z.object({
   style: StyleSchema.optional(),
-  contents: ContentSchema,
+  contents: z.array(
+    z.union([ITextSchema, ITableSchema, IViewsSchema, IImageSchema])
+  ),
 });
 
 const IFooterSchema = z.object({
   style: StyleSchema.optional(),
-  contents: ContentSchema,
+  contents: z.array(
+    z.union([ITextSchema, ITableSchema, IViewsSchema, IImageSchema])
+  ),
 });
 
 const IDocumentSchema = z.object({
@@ -296,7 +296,9 @@ const IPagesSchema = z.object({
 const IPDFPageSchema: z.ZodObject<any> = z.object({
   document: IDocumentSchema,
   pages: IPagesSchema,
-  contents: ContentSchema,
+  contents: z.array(
+    z.union([ITextSchema, ITableSchema, IViewsSchema, IImageSchema])
+  ),
   header: IHeaderSchema.optional(),
   footer: IFooterSchema.optional(),
 });
